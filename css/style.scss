@@ -1,0 +1,61 @@
+//mixins
+@mixin border($width, $bord-color, $radius:0) {
+	border: {
+		color: $bord-color;
+		width: $width;
+		style: solid;
+	};
+	border-radius: $radius;
+}
+
+//general style
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	background-color: #E7E0CB;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+}
+
+svg {
+	display: block;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+.tooltip {
+	background: #fff;
+	@include border(1px, #fff, 3px);
+	p {
+		font-size: 0.95em;
+		font-weight: 600;
+		margin:0;
+		text-align: center;
+	}
+}
+
+.chart-name {
+	fill: #000;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+.axis-title {
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.chart-comment {
+	font-size: 0.75em;
+	fill: #666;
+}
+
+footer {
+	p {
+		text-align: center;
+		font-size: 0.9em;
+	}
+}
